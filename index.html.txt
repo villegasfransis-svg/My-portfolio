@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* ===== Global Styles ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    a { color: var(--accent-color); text-decoration: none; }
+    h1, h2, h3 { color: var(--accent-color); }
+    section { padding: 60px 20px; }
+    .container { max-width: 1100px; margin: auto; }
+
+    /* ===== Theme Variables ===== */
+    :root {
+      --bg-color: #f4f4f9;
+      --text-color: #222;
+      --accent-color: #0044cc;
+      --card-bg: #fff;
+      --nav-bg: rgba(255,255,255,0.9);
+    }
+    .dark-mode {
+      --bg-color: #0d0d0d;
+      --text-color: #e0e0e0;
+      --accent-color: #4da6ff;
+      --card-bg: #1a1a1a;
+      --nav-bg: rgba(0,0,0,0.9);
+    }
+
+    /* ===== Navigation ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: var(--nav-bg);
+      padding: 15px;
+      z-index: 1000;
+      display: flex; justify-content: center; align-items: center;
+    }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { transition: color 0.3s; }
+    nav ul li a:hover { color: #80bfff; }
+    #dark-toggle {
+      margin-left: 20px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: var(--accent-color);
+      color: #fff;
+      transition: background 0.3s;
+    }
+    #dark-toggle:hover { background: #80bfff; }
+
+    /* ===== Hero Section ===== */
+    #home {
+      height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      background: linear-gradient(135deg, var(--bg-color), #1a1a40);
+      text-align: center;
+      transition: background 0.5s ease;
+    }
+    #home h1 { font-size: 3rem; }
+    #home p { font-size: 1.2rem; margin-top: 10px; }
+    #home img { width:150px; height:150px; border-radius:50%; margin-bottom:20px; transition: transform 0.3s; }
+    #home img:hover { transform: scale(1.05); }
+
+    /* ===== Cards ===== */
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px 0;
+      transition: transform 0.3s, background 0.5s ease, color 0.5s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+
+    /* ===== Grid Layout ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+
+    /* ===== Responsive ===== */
+    @media(max-width:768px){
+      nav ul { flex-direction: column; }
+      nav ul li { margin: 10px 0; }
+    }
+    .project-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover; 
+  max-height: 200px;
+}
+
+/* Special rule for second photo */
+.fit-img {
+  object-fit: contain; 
+  background: #000;    
+}
+
+
+    /* ===== Smooth Scroll ===== */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <!-- ===== Navigation ===== -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- Dark Mode Toggle -->
+    <button id="dark-toggle">🌙 Dark Mode</button>
+  </nav>
+
+  <!-- ===== Home Section ===== -->
+  <section id="home">
+    <img src="c:\Users\Fransis\Downloads\746779666_1419245670170066_599761926619775036_n.jpg" alt="Your Photo">
+    <h1>Fransis Villegas</h1>
+    <p>Aspiring Web Developer | Designer</p>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>Welcome to my personal porfolio Im Fransis Villegas I am a passionate developer who loves creating Solving Problems and making responsive websites.</p>
+  </section>
+
+  <!-- ===== Skills ===== -->
+  <section id="skills" class="container">
+    <h2>Programming Languages</h2>
+    <div class="grid">
+      <div class="card"><h3>HTML</h3></div>
+      <div class="card"><h3>C++</h3></div>
+      <div class="card"><h3>Oracle</h3></div>
+      <div class="card"><h3>Problem Solving</h3></div>
+    </div>
+  </section>
+
+  <!-- ===== Experience ===== -->
+  <section id="experience" class="container">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Front-End Developer and BackEnd developer</h3>
+      <p>I worked on UI of my project in OOP, and i worked also in backend in C++ did make a coffee shop menu</p>
+    </div>
+  </section>
+
+ <!-- ===== Projects ===== -->
+<section id="projects" class="container">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>C++</h3>
+      <img src="c:\Users\Fransis\Pictures\Screenshots\Screenshot 2026-10-15 175956.png" alt="Project 1" class="project-img">
+      <h3>Coffee shop menu system</h3>
+      <p>A simple coffee shop automation, that helps you to pick what best coffee for you</p>
+    </div>
+    <div class="card">
+      <h3>Python</h3>
+      <img src="c:\Users\Fransis\Pictures\Screenshots\Screenshot 2026-10-15 180906.png" alt="Project 2" class="project-img fit-img">
+      <h3>Music List System</h3>
+      <p>This system helps you to add your favorite music</p>
+  </div>
+</section>
+
+
+
+  <!-- ===== Education ===== -->
+  <section id="education" class="container">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>BS Associate in Computer Technology </h3>
+      <p>Datamex College of the Philippines</p>
+    </div>
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section id="services" class="container">
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card"><h3>Web Design</h3></div>
+      <div class="card"><h3>BackEnd Programs</h3></div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <p>Email:Villegasfransis@gmail.com</p>
+    <p>GitHub:github.com/villegasfransis-svg</p>
+    <p> Quezon City, Philippines</p>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2026 Fransis Villegas | Personal Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+ </body>
+ </html>
